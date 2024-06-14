@@ -4,6 +4,7 @@ Adds a 'Scan with VirusTotal' *Quick Action* for files in Finder on MacOS. This 
 
 If a hash is found, the report is pulled and opened within 5-10 seconds. If the script must upload the file and wait for VirusTotal to scan, the report will take a few minutes to produce.
 
+<br>
 
 ### Prerequisites
 1. An API key from VirusTotal is required. Once you have your API key, you should replace "paste_virustotal_api_key_here" with it in `config.ini.example`. **After doing so, rename `config.ini.example` to `config.ini`**
@@ -13,6 +14,7 @@ You can create a free account at https://virustotal.com/ to obtain an API key. T
 2. Python 3 is required. This script was created for Python 3.12.2, but should be compatiable with any Python 3 versions.
     - Some packages are also required. This is installed for you during the installation, but be sure they install correctly or the script will fail.
 
+<br>
 
 ### Installation
 ``` bash
@@ -30,11 +32,16 @@ sh install.sh
 ls -l $HOME/.virustotal_plugin/src/main.py && ls -l $HOME/.virustotal_plugin/src/scan.py
 ```
 
+<br>
+
+
 ### Using the plugin
 
 After you've reviewed the output from running `install.sh` to ensure no errors occured, you are ready to use the plugin. To test it out, I recommend opening your Downloads folder in Finder, finding a small-medium size file (1-10 megabytes), right-clicking, hovering over Quick actions, and selecting *Scan with VirusTotal*.
 
 It could take up to 2-3 minutes to complete (or timeout). After which, you will see a browser window open with a report containing the results of the VirusTotal scan.
+
+<br>
 
 ### Troubleshooting / Logs
 
