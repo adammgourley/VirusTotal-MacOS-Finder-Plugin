@@ -5,7 +5,7 @@ Adds a 'Scan with VirusTotal' *Quick Action* for files in Finder on MacOS. This 
 If a hash is found, the report is pulled and opened within 5-10 seconds. If the script must upload the file and wait for VirusTotal to scan, the report will take a few minutes to produce.
 
 
-#### Prerequisites
+##### Prerequisites
 1. An API key from VirusTotal is required. Once you have your API key, you should replace "paste_virustotal_api_key_here" with it in `config.ini.example`. After doing so, rename `config.ini.example` to `config.ini`
 
 You can create a free account at https://virustotal.com/ to obtain an API key. This script is set up to stay within the rate limits of the free version. For paying users, these limits can be adjusted in the two *while* loops in `scan.py`, specifically the amount of time set in `time.sleep` in main().
