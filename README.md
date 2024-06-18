@@ -24,6 +24,10 @@ git clone https://github.com/adammgourley/VirusTotal-MacOS-Finder-Plugin.git
 # 2. CD into downloaded folder
 cd VirusTotal-MacOS-Finder-Plugin/
 
+# 3. Rename config file and add API key
+mv config.ini.example config.ini
+nano config.ini
+
 # 3. Execute installation script
 sh install.sh
 
@@ -39,17 +43,25 @@ ls -l $HOME/.virustotal_plugin/src/main.py && ls -l $HOME/.virustotal_plugin/src
 
 After you've reviewed the output from running `install.sh` to ensure no errors occured, you are ready to use the plugin. To test it out, I recommend opening your Downloads folder in Finder, finding a small-medium size file (1-10 megabytes), right-clicking, hovering over Quick actions, and selecting *Scan with VirusTotal*.
 
-It could take up to 2-3 minutes to complete (or timeout). After which, you will see a browser window open with a report containing the results of the VirusTotal scan.
+It could take up to 2-3 minutes to complete. After which, you will see a browser window open with a report containing the results of the VirusTotal scan.
+
+You will know the action is running by seeing the gear icon in your top menu bar. As seen in this screenshot:
+
+![Scan Progress Icon](./pics/Scan_Progress_Icon.png)
 
 <br>
 
-### Troubleshooting / Logs
+### Troubleshooting, Logs, and Report History
 
-If you did not see a report open in the browser, you should check the following locations for indicators as to what went wrong.
+If you did not see a report open in the browser, you should check the following location for indicators as to what went wrong.
 ``` bash
 # Logs for stdout & stderr
 ls $HOME/.virustotal_plugin/logs
+```
 
+All reports are saved to the following location.
+
+``` bash
 # Directory that stores all reports generated or downloaded via this script
 ls $HOME/.virustotal_plugin/reports
 ```
